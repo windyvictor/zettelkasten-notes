@@ -1,12 +1,22 @@
 # zettelkasten-notes
 
-[English](README.md) | 中文
+[English](README.md) | 中文 · [Research Skillbox 总导航](https://github.com/windyvictor/research-skillbox)
 
 > 将阅读、听课和研究中的材料转化为可复用卡片，并用真实连接支持写作与思考。
 
 ## 一句话定位
 
 面向个人知识库的卡片写作、连接、审阅和体检技能。它支持闪念笔记、文献笔记、永久笔记、项目笔记及 AI 草稿协作，并以实际复用效果衡量笔记质量。
+
+## 你会得到什么
+
+- 忠于来源的闪念、文献、永久或项目卡片草稿
+- 明确说明支持、反驳、延伸或应用关系的真实连接
+- AI 候选卡从草稿到人审的清晰状态
+- 从已有卡片长出的段落、提纲或文章结构
+- 对断链、重复标题、长期草稿和人审状态的只读体检
+
+工作路径是：**保留来源 → 用自己的话写出一个可复用想法 → 寻找并解释真实连接 → 不确定内容保持草稿 → 在写作中复用**。卡片盒的价值不在数量，而在未来能否重新参与思考。
 
 ## 何时使用
 
@@ -40,6 +50,15 @@ python3 -m unittest discover -s tests -v
 ```
 
 检查结果只提供机械线索。作者归因、上下文指代、卡片长度和连接质量仍需结合语义判断。
+
+## 安装
+
+```bash
+git clone https://github.com/windyvictor/zettelkasten-notes.git
+ln -s "$PWD/zettelkasten-notes" ~/.agents/skills/zettelkasten-notes
+```
+
+其他宿主请把仓库放入对应的 skills 目录。写入个人知识库前，请先确认目标路径和写入范围。
 
 ## 许可
 

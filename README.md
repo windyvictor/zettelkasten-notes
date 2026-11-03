@@ -1,8 +1,22 @@
 # zettelkasten-notes
 
-English | [中文](README.cn.md)
+English | [中文](README.cn.md) · [Research Skillbox](https://github.com/windyvictor/research-skillbox)
 
 A Zettelkasten skill for turning reading, lectures, conversations, and research into reusable notes, connecting them with evidence, and using them to support writing and thinking.
+
+## Why this skill
+
+A note archive can grow for years without producing a single argument. Zettelkasten works when notes are understandable on their own, faithful to their sources, linked for a stated reason, and repeatedly reused in new thinking and writing. This skill treats the vault as a production system rather than a storage collection.
+
+### What you get
+
+- Source-faithful fleeting, literature, permanent, or project-note drafts
+- Connections that state whether one card supports, contradicts, extends, or applies another
+- Human-review states for AI-generated candidates
+- Paragraphs, outlines, or article structures grown from existing cards
+- Read-only vault audits for broken links, duplicate titles, stale drafts, and review problems
+
+**Workflow:** capture the source → restate one usable idea → find and explain real connections → keep uncertain material in draft → reuse notes in an output.
 
 ## Use it for
 
