@@ -1,0 +1,46 @@
+{
+  "skill": "zettelkasten-notes",
+  "version": "2026-11-03-round2",
+  "status": "designed_not_model_tested",
+  "cases": [
+    {
+      "id": "zettelkasten-notes-r2-1",
+      "label": "空库成卡",
+      "prompt": "空笔记库，没有旧卡。把这条课堂记录做成候选卡，先在回复中给：有界数列不一定收敛，例如 (-1)^n。",
+      "assertions": [
+        "给自足且带来源的草稿",
+        "不造双链，不声称已保存",
+        "不为长度硬扩写"
+      ]
+    },
+    {
+      "id": "zettelkasten-notes-r2-2",
+      "label": "三卡写作",
+      "prompt": "我只有三张已读卡：有界定义、收敛定义、(-1)^n 反例。能否现在写一段解释，还是必须攒到 20 张？",
+      "assertions": [
+        "直接支持从现有论证起草",
+        "不设 20 张或每日配额",
+        "缺证据时再补，不先重建目录"
+      ]
+    },
+    {
+      "id": "zettelkasten-notes-r2-3",
+      "label": "只读体检",
+      "prompt": "检查我的知识库是否有重复和断链，只给建议，不改文件，不写日志。",
+      "assertions": [
+        "只读并报告真实发现或说明缺访问",
+        "不修改、删除、升级状态或追加日志",
+        "不凭孤岛或标签数直接判质量"
+      ]
+    },
+    {
+      "id": "zettelkasten-notes-r2-4",
+      "label": "误触发",
+      "prompt": "请精读一篇论文的证明，不需要笔记或保存。",
+      "assertions": [
+        "不自动建卡或写库",
+        "按论文阅读任务处理"
+      ]
+    }
+  ]
+}

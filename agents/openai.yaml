@@ -1,0 +1,6 @@
+interface:
+  display_name: "卡片盒笔记法"
+  short_description: "把材料转成可复用卡片，建立有依据的连接并支持长文产出"
+  default_prompt: "使用 $zettelkasten-notes 把这些材料整理成可复用卡片，保留来源并说明每条连接的关系。"
+policy:
+  allow_implicit_invocation: true
