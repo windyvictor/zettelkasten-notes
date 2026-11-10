@@ -90,7 +90,8 @@ LINK_RE = re.compile(
     r"|参见\s*\S+"
     r"|\bsee also\b\s*\S+", re.I)
 RELATION_RE = {
-    "zh": re.compile(r"支持|反驳|补充|延伸|矛盾|修正"),
+    # 四维九链判断词（进阶 03，现行）+ 旧版关系词（保留兼容旧卡）
+    "zh": re.compile(r"证据|反例|前提|因果|上位|下位|同层|映射|同主题|支持|反驳|补充|延伸|矛盾|修正"),
     "en": re.compile(r"\b(supports?|contradicts?|refutes?|extends?|complements?|qualifies|revises?|supersedes?)\b", re.I),
 }
 RELATION_ANY = re.compile(RELATION_RE["zh"].pattern + "|" + RELATION_RE["en"].pattern, re.I)
@@ -202,7 +203,7 @@ def check_text(text, name="<stdin>", lang="auto"):
         add(0, "INFO", "无连接", "0", "查找真实相关旧卡；新库或暂无匹配时可保留无连接草稿，不编造链接"
             if lang == "zh" else "Look for related existing cards; an unlinked draft is valid when none fit. Do not invent links.")
     elif not RELATION_ANY.search(body_text):
-        add(0, "INFO", "关系未标注", f"{n_links} 条连接", "连接应注明关系（支持/反驳/补充/延伸/修正）"
+        add(0, "INFO", "关系未标注", f"{n_links} 条连接", "连接应写九链判断词（证据/反例/前提/因果/上位/下位/同层/映射/同主题）+ 关系说明 + 添加理由"
             if lang == "zh" else "Label each link: supports / contradicts / extends / qualifies / revises")
 
     order = {"ERROR": 0, "WARN": 1, "INFO": 2}

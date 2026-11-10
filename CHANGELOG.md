@@ -1,5 +1,22 @@
 # CHANGELOG
 
+## 2.2.0 — 2026-11-10（草案，待人审）
+
+依据：雷墨「卡片盒笔记法：入门到精通48讲」进阶 01–04；Brucky《The Second Brain Guide》（X，2026-10-22）；Jackywine《Grok Bot + Obsidian 打造你的全自动可进化第二大脑》（X，2026-11-06）。
+
+### 新增
+- `references/11-advanced-workflow.md`：五环节工作流（进阶 01）、迭代思维（进阶 02）、四维九链关系判断法（进阶 03）、KISME 卡片角色分类法（进阶 04）。
+- SKILL.md 新增「五环节工作流程」「写卡先判角色（KISME）」「链接先判关系（四维九链）」「改格式从下一张开始」四节；核心思想加“两道前置判断”。
+- AI 规则：自检不等于核验（脚本管机械项，人或新上下文管判断项）；收件箱跳过私人情绪内容；增量处理与来源改动后的过期提示；不为指标造空壳卡。
+- `references/10-ai-collaboration.md` §9 编译与增量处理；§5 补“谁来核”。
+- `evals/round3-cases.json`：链接理由、角色拆卡、新格式与旧卡、收件箱隐私与断链 4 个案例（未实测）。
+
+### 修改
+- `assets/card-templates.md`：默认排版改为加粗小标签、列表项间空行、末尾 `#` 标签行（无「标签：」前缀）；永久卡连接改用九链写法；§4 六型改为 KISME 角色表（行动卡降为扩展）。
+- `references/04-connection-org.md`、`09-community-practices.md`：文件头加“现行标准见 11”的说明，旧写法保留作历史对照。
+- `assets/vault-rules-template.md`：加卡片角色、链接写法、格式变更、隐私、编译清单条目。
+- `scripts/check_card.py`：关系词识别加入九链判断词，旧关系词继续兼容；提示文字更新。`tests/` 增 2 条测试。
+
 ## 2026-11-02
 
 - 删除 `references/02-growth-logic.md` 中个人绝对路径行（`来源目录：/Volumes/Mac mini/...`）；用户确认直接删除，不改写成通用说明。

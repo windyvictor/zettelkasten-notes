@@ -60,6 +60,15 @@ class CardTests(unittest.TestCase):
         self.assertEqual(hints[0]["level"], "INFO")
         self.assertEqual(result["errors"], 0)
 
+    def test_nine_link_words_count_as_relation(self):
+        result = CHECK(CARD + "\n连接：\n- **前提**：[[间隔复习的定义]]——不先懂定义，本卡悬空；放在本卡之前交代。")
+        self.assertEqual(result["links"], 1)
+        self.assertFalse(any(i["rule"] == "关系未标注" for i in result["issues"]))
+
+    def test_unlabeled_link_is_hinted(self):
+        result = CHECK(CARD + "\n相关卡片：[[间隔复习的定义]]")
+        self.assertTrue(any(i["rule"] == "关系未标注" and i["level"] == "INFO" for i in result["issues"]))
+
 
 if __name__ == "__main__":
     unittest.main()
